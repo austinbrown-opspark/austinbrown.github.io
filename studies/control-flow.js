@@ -25,7 +25,8 @@ if (number > 0) {
 /* Else If is an extension of If and can only be used when there is already an if statement. You can use as many of them
 * in series after the initial if as you want. Else If would be used to check for something else to evaluate if the initial
 * if was false. The interpreter evaluates each else if in order until one comes back as true. After this it will ignore the
-* rest of the else-if/else and run the code block corresponds to the current else-if/else. 
+* rest of the else-if/else and run the code block corresponds to the current else-if/else. There is no limit to the number
+* of these that can be chained together.
 */
 
 number = -10
@@ -71,5 +72,14 @@ switch (color) {
     case "green":
         console.log("The color is green")
         break;
+    default:
+        console.log("This must be some other color")
 }
-// Everything above is pretty self explanatory. Make sure to use "break" to end the current "case".
+/* As you can see above, the switch statement is declared with the word "switch" and then the paranthesis that follow will
+* typically include a variable of some kind that will then be compared to the "cases" that follow. If the case value
+* matches the value from the parenthesis at the top, the code block corresponding to that case will execute. At the end
+* of the code block, the word "break" must be added to signal to the interpreter the end of the code block. The "default"
+* section at the end works just like the "else" from traditional if/else statements. If a match is not found in any of
+* the cases, then the code block corresponding to "default" will run. Also similar to if/else statements, the "default"
+* is optional.
+*/

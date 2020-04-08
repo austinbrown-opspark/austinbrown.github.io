@@ -15,7 +15,16 @@ var number = 4
 
 // 2. String //
 var string = "this is a string"
-// Strings are any series (or single) of characters including numbers, letters, or symbols and must be surrounded by quotation marks. 
+/* Strings are any series (or single) of characters including numbers, letters, or symbols and must be surrounded by 
+* quotation marks. Each value of a string is indexed ascending, starting at zero. To access a specfic character of a 
+* string, we can use brackets with a number for the desired index. See example below.
+*/
+console.log("this is a string"[3]) // The console will show "s", which is the 4th character (3rd when counting from 0)
+
+// Normally the brackets would be used on a variable that holds a string, like this.
+console.log(string[3]) /* The console will show "s" again since variable "string" holds the same string as the previous
+* example as it was assigned at the beginning of this section.
+*/
 
 // 3. Boolean // 
 var boolean = true
@@ -26,7 +35,11 @@ var array = [4, "this is a string in an array", boolean]
 /* Arrays are enclosed with brackets and can hold all types of values, including all the ones listed in my summary
 * of datatypes at the beginning, separated by commas. It is essentially just a list. Each item in the array has a 
 * corresponding index which it can be identified with, starting with 0 and extending to however many objects are
-* in the array (ie. the first object in the array has an index of 0, the second is 1, and so on)
+* in the array (ie. the first object in the array has an index of 0, the second is 1, and so on). Below is an
+* example showing how to access a specfic value from an array.
+*/
+console.log(array[0]) /* Using the "array" array from above, the 0 in brackets placed after the array will cause
+* this console to display "4", which is the first (0th) value in the "array" array.
 */
 
 // 4. Object //
@@ -35,6 +48,16 @@ var object = {"this is a key": "this is a value", key: "value", number: 8}
 * implied index number, it has a custom identification called a key which is input by the coder. Keys are usually
 * strings but don't necessarily need to be in quotes unless there are spaces in the name or if any of the words are 
 * JavaScript specific words that trigger something. Objects also are enclosed with curly braces instead of brackets.
+* There are 2 ways to access a value of an object which are demonstrated below.
+*/
+
+// Type the name of the object, followed by a dot, followed by the name of a key in that object.
+console.log(object.key) // Console will show: "value", which is the value corresponding to the key "key" from the object above
+// This is the mnost common way to access object values and it is known as dot notation. 
+
+console.log(object["key"]) /* This is how to display the same value to the console but using bracket notation, and it 
+* works basically the same way as bracket notation in strings and arrays - only instead of a number in the brackets
+* its the name of a key.
 */
 
 // 5. Function //
@@ -81,24 +104,24 @@ var nullVariable = null
 /* NaN is most commonly displayed as a result of trying to perform an arithmetic operation on a datatype that is  
 * not a number. Below are some exaples of calculations that will return a NaN.
 */
-console.log(27 - "apple")
-console.log("string" / 2)
+console.log(27 - "apple") // Console shows: NaN
+console.log("string" / 2) // Console shows: NaN
 
 // 10. Infinity and -Infinity //
 /* These datatypes are what is displayed when a number exceeds the limit of what JavaScript can handle. These numbers
 * are 1.797693134862315E+308 and -1.797693134862315E+308. Below you can see the console will show the number ending
 * in 5, but once it his 6 the console defaults to "Infinity". The same goes for negatives.
 */
-console.log(1.797693134862315E+308)
-console.log(1.797693134862316E+308)
-console.log(-1.797693134862316E+308)
+console.log(1.797693134862315E+308) // Console reads back the number as expected
+console.log(1.797693134862316E+308) // Console shows: Infinity
+console.log(-1.797693134862316E+308) // Console shows: -Infinity
 
 // 11. (See initial description of datatypes above) //
 
 // 12. By Copy vs. By Reference //
 /* A value being passed "by copy" in primitive datatypes means that the value is being copied verbatim from one place 
 * to another. In complex types, the values are only references to someplace in the memory where they are stored. When
-* a change is made to a value, anything also that also points to or references that value will reflect that change.
+* a change is made to a value, anything that also points to or references that value will reflect that change.
 */
 
 var x = 5
