@@ -47,7 +47,8 @@ let myLetVariable = "something"
 const myConstVariable = "anything"
 /*
 * let and const were introduced at a later point to address some of the problems with var. let and const are
-* very similar, the main difference with const being that it cannot be reassigned. let and const are block scoped,
+* very similar. The main difference is that const cannot be reassigned - meaning you can't use that variable
+* name anywhere else in the code with an assignment operator (=). let and const are block scoped,
 * that is, they are only accessible from within the block of code from which they are declared. So that includes
 * functions, loops and if statements; whichever it is most closely encapsulated by. 
 */

@@ -14,7 +14,7 @@
 // 3. Syntax for defining named function:
 
 function functionName() {
-    console.log("function contents")
+    console.log("function contents") // Console shows: "function contents"
 }
 
 // Syntax for calling the funtion:
@@ -51,13 +51,13 @@ if (true) {
     function someFunction() {
       var childVar = "variable in child scope"
     }
-    console.log(globalVar)
-    console.log(parentVar)
-    //console.log(childVar)
+    console.log(globalVar) // Console shows: "global variable" - because variables declared with var in the main code block are global and are accessible from anywhere in the code
+    console.log(parentVar) // Console shows: "varaiable in parent scope" - because child scopes can see var variables in their parent scopes as well
+    //console.log(childVar) // Console would show a reference error because the childVar is being console logged from its parent scope and parent scopes cannot see their child scopes
   }
 }
 /* The console logs in the code above will show that the var variables are accessible from their parent scopes, 
-* but not the child scopes. The console log for childVar has been commented out because it causes a reference error.
+* but not the child scopes.
 */
 
 // 7. Closures //
