@@ -346,7 +346,7 @@ _.reject = function(array, func){
 _.partition = function(array, func){
     // Create empty array to hold truthies
     let aTruthies = [];
-    // Create empty array to hold falies
+    // Create empty array to hold falsies
     let aFalsies = [];
     // For all values of the input array
     for(let i = 0; i < array.length; i++) {
@@ -354,9 +354,8 @@ _.partition = function(array, func){
         if(func(array[i], i, array)){
             // Add current value to truthies array
             aTruthies.push(array[i])
-        // If input function returns falsey when current value of input array, its index, and the whole array respectively are passed
-        } else if (!func(array[i], i, array)) {
-            // Add current value to falsies array
+        } else {
+            // Otherwise, add current value to falsies array
             aFalsies.push(array[i])
         };
     };
@@ -556,7 +555,7 @@ _.reduce = function(array, func, seed) {
             seed = element;
         } else {
             /* Otherwise, call the input function using arguments of - 'seed's current value, the array's current 
-            * index using the counter value, and the current index respectively - and assign that value to seed
+            * index using the counter value, and the current index respectively - and assign that return value to seed
             */
             seed = func(seed, element, i);
         }
